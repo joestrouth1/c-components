@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-export const HeaderLegacy = () => (
+const HeaderLegacy = () => (
   <div>
     <header>Logo</header>
     <nav>
@@ -12,4 +12,6 @@ export const HeaderLegacy = () => (
       </ul>
     </nav>
   </div>
-);
+)
+
+export default HeaderLegacy
