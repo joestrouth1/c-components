@@ -8,7 +8,7 @@ const HeaderLegacy = () => (
         <li>Link</li>
         <li>Link</li>
         <li>Link</li>
-        <li>Link</li>
+        <li>Lin</li>
       </ul>
     </nav>
   </div>
