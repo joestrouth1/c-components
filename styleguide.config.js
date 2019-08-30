@@ -3,7 +3,7 @@ const { version } = require('./package')
 
 module.exports = {
   components: 'src/**/*.tsx',
-  defaultExample: true,
+  defaultExample: false,
   moduleAliases: {
     '@': path.resolve(__dirname, 'src'),
   },
@@ -16,11 +16,21 @@ module.exports = {
           exclude: /node_modules/,
           loader: 'babel-loader',
         },
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'postcss-loader',
+          ],
+        },
       ],
-      noParse: /\.(css|scss)/,
     },
     resolve: {
       extensions: ['.js', 'jsx', '.ts', '.tsx', '.json'],
     },
   },
+  propsParser: require('react-docgen-typescript').withCustomConfig(
+    './tsconfig.json'
+  ).parse,
 }
