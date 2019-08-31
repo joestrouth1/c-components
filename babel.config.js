@@ -5,7 +5,8 @@ const styleguideConfig = {
       {
         modules: false,
         useBuiltIns: 'usage',
-        corejs: 3,
+        // corejs: 3,
+        corejs: 2,
       },
     ],
     ['@babel/preset-react'],

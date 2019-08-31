@@ -1,15 +1,17 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import './HeaderLegacy.css'
-
-interface HeaderLegacyProps {
-  linkText: string
-}
 
 /**
  * The old HeaderLegacy component
  */
-const HeaderLegacy = (props: HeaderLegacyProps) => (
-  <>
+const HeaderLegacy = () => (
+  <div
+    className="_header-legacy"
+    sx={{
+      fontFamily: 'sans',
+    }}
+  >
     <header>
       <div className="log-in-row">
         <div className="container-fluid">
@@ -257,7 +259,7 @@ const HeaderLegacy = (props: HeaderLegacyProps) => (
         </div>
       </div>
     </div>
-  </>
+  </div>
 )
 
 export default HeaderLegacy

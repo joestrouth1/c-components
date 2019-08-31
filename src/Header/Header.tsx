@@ -1,4 +1,5 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import './Header.css'
 
 interface HeaderProps {
@@ -6,13 +7,17 @@ interface HeaderProps {
 }
 
 /**
- * The old header component
+ * The header component
  */
 const Header = (props: HeaderProps) => (
   <div>
     <header>Logo</header>
     <nav>
-      <ul>
+      <ul
+        sx={{
+          color: 'primary',
+        }}
+      >
         <li>{props.linkText}</li>
         <li>{props.linkText}</li>
         <li>{props.linkText}</li>

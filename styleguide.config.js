@@ -4,9 +4,9 @@ const { version } = require('./package')
 module.exports = {
   components: 'src/**/*.tsx',
   defaultExample: false,
-  moduleAliases: {
-    '@': path.resolve(__dirname, 'src'),
-  },
+  // moduleAliases: {
+  //   '@': path.resolve(__dirname, 'src'),
+  // },
   version,
   webpackConfig: {
     module: {
@@ -33,4 +33,7 @@ module.exports = {
   propsParser: require('react-docgen-typescript').withCustomConfig(
     './tsconfig.json'
   ).parse,
+  styleguideComponents: {
+    Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),
+  },
 }
