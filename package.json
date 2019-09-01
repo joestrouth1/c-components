@@ -74,6 +74,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.16",
     "@mdx-js/react": "^1.4.0",
+    "colorable": "^1.0.5",
     "theme-ui": "^0.2.38"
   }
 }

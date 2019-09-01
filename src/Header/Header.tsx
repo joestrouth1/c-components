@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import './Header.css'
 
 interface HeaderProps {
   linkText: string
