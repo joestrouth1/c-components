@@ -1,3 +1,4 @@
+// Theme is written in typescript, so it must be built first.
 const { defaultTheme: theme } = require('./dist')
 
 module.exports = {

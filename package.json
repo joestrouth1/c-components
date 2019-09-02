@@ -57,6 +57,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/theme-ui": "^0.2.2",
     "autoprefixer": "^9.6.1",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "colorable": "^1.0.5",
     "css-loader": "^3.2.0",
