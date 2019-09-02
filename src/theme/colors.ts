@@ -66,7 +66,7 @@ const brand = {
   red: red[30],
 }
 
-const colors = {
+const allColors = {
   text: brand.black,
   background: gray.green[0],
   primary: brand.green,
@@ -79,7 +79,7 @@ const colors = {
   gray,
 }
 
-export default {
+export const colors = {
   brand,
-  ...colors,
+  ...allColors,
 }

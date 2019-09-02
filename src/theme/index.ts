@@ -1,7 +1,10 @@
-import colors from './colors'
-import typography from './typography'
+import { colors } from './colors'
+import { typography } from './typography'
 
-export default {
+export const defaultTheme = {
   ...typography,
   colors,
 }
+
+export * from './typography'
+export * from './colors'

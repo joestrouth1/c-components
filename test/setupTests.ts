@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom/extend-expect'
-console.log(`FROM SETUP`)
 const consoleError = console.error
 
 let consoleErrorLog: any[] = []
