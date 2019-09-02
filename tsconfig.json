@@ -1,5 +1,9 @@
 {
-  "include": ["src", "types"],
+  "include": [
+    "src",
+    "types",
+    "node_modules/@testing-library/jest-dom/extend-expect.d.ts"
+  ],
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
