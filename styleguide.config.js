@@ -4,9 +4,17 @@ const { version } = require('./package')
 module.exports = {
   components: 'src/**/*.tsx',
   defaultExample: false,
-  // moduleAliases: {
-  //   '@': path.resolve(__dirname, 'src'),
-  // },
+  moduleAliases: {
+    'c-components': path.resolve(__dirname, 'src'),
+    styleguide: path.resolve(__dirname, 'src', 'styleguide'),
+  },
+  ignore: [
+    '**/__tests__/**',
+    '**/*.test.{js,jsx,ts,tsx}',
+    '**/*.spec.{js,jsx,ts,tsx}',
+    '**/*.d.ts',
+    '**/styleguide/Wrapper.tsx',
+  ],
   version,
   webpackConfig: {
     module: {
@@ -22,6 +30,18 @@ module.exports = {
             'style-loader',
             { loader: 'css-loader', options: { importLoaders: 1 } },
             'postcss-loader',
+          ],
+        },
+        {
+          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name][md5:hash:base64:8].[ext]',
+                outputPath: 'fonts/',
+              },
+            },
           ],
         },
       ],
