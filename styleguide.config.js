@@ -31,11 +31,6 @@ module.exports = {
           content: 'docs/configuration.md',
           exampleMode: 'expand',
         },
-        {
-          name: 'Live Demo',
-          external: true,
-          href: 'http://example.com',
-        },
       ],
     },
     {
