@@ -2,11 +2,12 @@
 import { jsx } from 'theme-ui'
 
 interface HeaderProps {
+  /** What each link should say */
   linkText: string
 }
 
 /**
- * The header component
+ * An example of a new Header component.
  */
 const Header = (props: HeaderProps) => (
   <div>

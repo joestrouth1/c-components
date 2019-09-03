@@ -360,10 +360,6 @@ const styles = `/*!
  box-sizing: border-box;
 }
 
-@-ms-viewport {
- width: device-width;
-}
-
 figcaption,
 header,
 main,
@@ -1310,11 +1306,11 @@ li.nav-item {
    border-right: solid 1px #00180e;
  }
 
- .header-icons div:first-child {
+ .header-icons div:first-of-type {
    border-left: none;
  }
 
- .header-icons div:last-child {
+ .header-icons div:last-of-type {
    border-right: none;
  }
 
