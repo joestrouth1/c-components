@@ -44,6 +44,7 @@ module.exports = {
         '**/*.spec.{js,jsx,ts,tsx}',
         '**/*.d.ts',
         '**/styleguide/Wrapper.tsx',
+        '**/styleguide/ColorPalettes.tsx',
       ],
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
