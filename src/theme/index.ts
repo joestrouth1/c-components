@@ -131,4 +131,7 @@ export const defaultTheme = {
       maxWidth: '100%',
     },
   },
+  buttons: {
+    nav: {},
+  },
 }

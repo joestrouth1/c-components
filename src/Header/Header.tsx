@@ -1,30 +1,58 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-
-interface HeaderProps {
-  /** What each link should say */
-  linkText: string
-}
+import { jsx, Header as BaseHeader } from 'theme-ui'
+import { useState } from 'react'
+import { Logo } from '../Logo'
 
 /**
- * An example of a new Header component.
+ * The site header.
  */
-const Header = ({ linkText = 'Click HERE' }: HeaderProps) => (
-  <div>
-    <header>Logo</header>
-    <nav>
-      <ul
+export const Header = () => {
+  const [isNavOpen, setNavOpen] = useState(false)
+  const toggleNav = () => setNavOpen(!isNavOpen)
+
+  return (
+    <BaseHeader
+      sx={{
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
+      <Logo
+        alt="Company Name"
         sx={{
-          color: 'primary',
+          py: [2],
+        }}
+      />
+      <nav
+        aria-expanded={isNavOpen}
+        aria-label="Main Navigation"
+        role="navigation"
+        sx={{
+          width: '100%',
+          display: 'flex',
+          flexFlow: 'column nowrap',
         }}
       >
-        <li>{linkText}</li>
-        <li>{linkText}</li>
-        <li>{linkText}</li>
-        <li>{linkText}</li>
-      </ul>
-    </nav>
-  </div>
-)
-
-export default Header
+        <button
+          onClick={toggleNav}
+          sx={{
+            fontSize: 2,
+          }}
+        >
+          Menu
+        </button>
+        <ul hidden={!isNavOpen}>
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Link</a>
+          </li>
+        </ul>
+      </nav>
+    </BaseHeader>
+  )
+}

@@ -93,7 +93,16 @@ module.exports = {
     },
   },
   propsParser: require('react-docgen-typescript').withCustomConfig(
-    './tsconfig.json'
+    './tsconfig.json',
+    {
+      propFilter: (props, component) => {
+        if (props.parent) {
+          return !props.parent.fileName.includes('node_modules')
+        }
+        return true
+      },
+      shouldExtractLiteralValuesFromEnum: true,
+    }
   ).parse,
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),

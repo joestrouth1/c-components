@@ -61,7 +61,7 @@ export function ColorPalette() {
     <div>
       {withCombinationsByLevel.map(({ hex, name, combinations }) => {
         return (
-          <div>
+          <div key={name}>
             <div
               sx={{
                 width: 64,
@@ -80,10 +80,10 @@ export function ColorPalette() {
               >
                 {name}
               </span>
-              <hr />
+              <br />
               <span
                 sx={{
-                  color: 'gray.green.40',
+                  color: 'grays.7',
                 }}
               >
                 {hex}
@@ -96,12 +96,15 @@ export function ColorPalette() {
                   sx={{
                     fontSize: 2,
                   }}
+                  key={`${name}-level_${level}`}
                 >
                   {level}
                 </p>,
+                //@ts-ignore
                 ...colors.map(color => {
                   return (
                     <div
+                      key={color.name}
                       sx={{
                         backgroundColor: color.hex,
                         padding: 16,
@@ -117,9 +120,9 @@ export function ColorPalette() {
           </div>
         )
       })}
-      <output>
+      {/* <output>
         <pre>{JSON.stringify(withCombinationsByLevel, null, 2)}</pre>
-      </output>
+      </output> */}
     </div>
   )
 }
