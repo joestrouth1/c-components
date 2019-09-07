@@ -107,4 +107,23 @@ module.exports = {
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/styleguide/Wrapper'),
   },
+  context: {
+    jsx: 'theme-ui/src/jsx',
+  },
+  compilerConfig: {
+    // Don't include an Object.assign ponyfill, we have our own
+    objectAssign: 'Object.assign',
+    // Transpile only features needed for IE11
+    target: { ie: 11 },
+    transforms: {
+      // Don't throw on ESM imports, we transpile them ourselves
+      modules: false,
+      // Enable tagged template literals for styled-components
+      dangerousTaggedTemplateString: true,
+      // to make async/await work by default (no transformation)
+      asyncAwait: false,
+    },
+    // use theme-ui's jsx function, added to context above
+    jsx: 'jsx',
+  },
 }

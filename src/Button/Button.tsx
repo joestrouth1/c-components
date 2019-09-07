@@ -25,7 +25,6 @@ export const Button = ({ variant = 'primary', ...props }: ButtonProps) => (
       px: 3,
       py: 2,
       border: 0,
-      borderRadius: 4,
       // pass variant prop to sx
       variant: `buttons.${variant}`,
     }}

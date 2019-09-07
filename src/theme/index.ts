@@ -132,6 +132,15 @@ export const defaultTheme = {
     },
   },
   buttons: {
-    nav: {},
+    nav: {
+      backgroundColor: 'grays.9',
+      color: 'white',
+      textTransform: 'uppercase',
+      py: 2,
+      fontWeight: 'body',
+      lineHeight: 'body',
+      fontSize: 2,
+      borderRadius: 0,
+    },
   },
 }
