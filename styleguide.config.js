@@ -3,9 +3,9 @@ const { version } = require('./package')
 const styleguideTheme = require('./styleguide.theme')
 
 module.exports = {
-  ribbon: {
-    url: 'https://github.com/joestrouth1/c-components',
-  },
+  // ribbon: {
+  //   url: 'https://github.com/joestrouth1/c-components',
+  // },
   title: 'c-components Styleguide',
   theme: styleguideTheme,
   defaultExample: false,
@@ -35,8 +35,11 @@ module.exports = {
       ],
     },
     {
+      name: 'Colors',
+      content: 'docs/colors.md',
+    },
+    {
       name: 'UI Components',
-      content: 'docs/ui.md',
       components: 'src/**/*.tsx',
       ignore: [
         '**/__tests__/**',
