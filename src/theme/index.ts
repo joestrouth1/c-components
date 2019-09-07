@@ -3,6 +3,12 @@ import { colors } from './colors'
 export const defaultTheme = {
   breakpoints: ['40em', '48em', '64em', '80em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  shadows: {
+    medium:
+      '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+    primary:
+      '0 5px 15px -2px rgba(0, 65, 66, 0.1), 0 4px 6px -2px rgba(0, 65, 66, 0.5)',
+  },
   fonts: {
     body:
       '"Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif',

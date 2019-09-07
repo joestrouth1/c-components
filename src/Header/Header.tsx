@@ -9,7 +9,7 @@ interface HeaderProps {
 /**
  * An example of a new Header component.
  */
-const Header = (props: HeaderProps) => (
+const Header = ({ linkText = 'Click HERE' }: HeaderProps) => (
   <div>
     <header>Logo</header>
     <nav>
@@ -18,10 +18,10 @@ const Header = (props: HeaderProps) => (
           color: 'primary',
         }}
       >
-        <li>{props.linkText}</li>
-        <li>{props.linkText}</li>
-        <li>{props.linkText}</li>
-        <li>{props.linkText}</li>
+        <li>{linkText}</li>
+        <li>{linkText}</li>
+        <li>{linkText}</li>
+        <li>{linkText}</li>
       </ul>
     </nav>
   </div>

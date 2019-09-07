@@ -30,5 +30,5 @@ module.exports = {
       'monospace',
     ],
   },
-  borderRadius: 0,
+  borderRadius: 4,
 }
