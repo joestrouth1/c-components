@@ -137,7 +137,6 @@ export const defaultTheme = {
       backgroundColor: 'grays.9',
       color: 'white',
       textTransform: 'uppercase',
-      py: 2,
       fontWeight: 'body',
       lineHeight: 'body',
       letterSpacing: 'body',
@@ -145,7 +144,8 @@ export const defaultTheme = {
       borderRadius: 0,
     },
     primary: {
-      p: 3,
+      py: 3,
+      px: 4,
       position: 'relative',
       background: `linear-gradient(to bottom, ${colors.greens[4]}, ${colors.greens[5]}), linear-gradient(to bottom, ${colors.greens[0]}, ${colors.greens[2]})`,
       backgroundOrigin: 'padding-box, border-box',
