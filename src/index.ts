@@ -1,3 +1,5 @@
 export * from './theme'
 export * from './Header'
 export * from './Logo'
+export * from './Button'
+export * from './Link'
