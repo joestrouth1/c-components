@@ -3,11 +3,11 @@ import { jsx } from 'theme-ui'
 import { HTMLAttributes } from 'react'
 import { defaultTheme } from '../theme'
 
-type ButtonVariant = keyof typeof defaultTheme.buttons | 'primary'
+type ButtonVariant = keyof typeof defaultTheme.buttons
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   /** Preset variant to use, defined in theme.buttons */
-  variant: ButtonVariant
+  variant?: ButtonVariant
 }
 
 export const Button = ({ variant = 'primary', ...props }: ButtonProps) => (
@@ -21,6 +21,8 @@ export const Button = ({ variant = 'primary', ...props }: ButtonProps) => (
       textDecoration: 'none',
       fontSize: 'inherit',
       fontWeight: 'bold',
+      fontFamily: 'body',
+      letterSpacing: 'button',
       m: 0,
       px: 3,
       py: 2,

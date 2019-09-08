@@ -13,6 +13,9 @@ const grays = [
 
 const greens = [
   '#D9F0E8',
+  '#a4d6c8',
+  '#74bdad',
+  '#49a898',
   '#0a7e76',
   '#06706b',
   '#036260',
@@ -21,7 +24,7 @@ const greens = [
   '#023537',
   '#042c2e',
 ]
-const green = greens[1]
+const green = greens[4]
 
 const reds = ['#ebd3d6', '#981e2c']
 const red = reds[1]

@@ -28,6 +28,7 @@ export const defaultTheme = {
   letterSpacings: {
     body: 'normal',
     heading: '-0.03em',
+    button: '-0.03em',
     caps: '0.2em',
   },
   colors: {
@@ -139,8 +140,23 @@ export const defaultTheme = {
       py: 2,
       fontWeight: 'body',
       lineHeight: 'body',
+      letterSpacing: 'body',
       fontSize: 2,
       borderRadius: 0,
+    },
+    primary: {
+      p: 3,
+      position: 'relative',
+      background: `linear-gradient(to bottom, ${colors.greens[4]}, ${colors.greens[5]}), linear-gradient(to bottom, ${colors.greens[0]}, ${colors.greens[2]})`,
+      backgroundOrigin: 'padding-box, border-box',
+      backgroundRepeat: 'no-repeat',
+      backgroundClip: 'padding-box, border-box',
+      border: '3px solid transparent',
+      boxShadow: 'primary',
+      borderRadius: 9999,
+      color: 'white',
+      fontSize: 4,
+      lineHeight: 1.3333333,
     },
   },
 }

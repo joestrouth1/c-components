@@ -2,6 +2,7 @@
 import { jsx, Header as BaseHeader } from 'theme-ui'
 import { useState } from 'react'
 import { Logo } from '../Logo'
+import { Button } from '../Button'
 
 /**
  * The site header.
@@ -33,14 +34,9 @@ export const Header = () => {
           flexFlow: 'column nowrap',
         }}
       >
-        <button
-          onClick={toggleNav}
-          sx={{
-            fontSize: 2,
-          }}
-        >
+        <Button onClick={toggleNav} variant="nav">
           Menu
-        </button>
+        </Button>
         <ul hidden={!isNavOpen}>
           <li>
             <a href="#">Link</a>

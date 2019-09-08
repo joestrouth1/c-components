@@ -1,9 +1,11 @@
-Nav button
+Nav button:
 
 ```jsx
-/**@jsx jsx*/
-import { jsx } from 'theme-ui'
-;<Button variant="nav" sx={{ width: '100%' }}>
-  Menu
-</Button>
+<Button variant="nav">Menu</Button>
+```
+
+Primary button:
+
+```jsx
+<Button variant="primary">Next</Button>
 ```
