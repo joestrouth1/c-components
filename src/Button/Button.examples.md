@@ -1,11 +1,12 @@
+Primary button:
+
+```jsx
+<Button>Next</Button>
+<Button disabled>Next</Button>
+```
+
 Nav button:
 
 ```jsx
 <Button variant="nav">Menu</Button>
-```
-
-Primary button:
-
-```jsx
-<Button variant="primary">Next</Button>
 ```

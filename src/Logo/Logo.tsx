@@ -1,6 +1,12 @@
-import React from 'react'
+/**@jsx jsx */
+import { jsx } from 'theme-ui'
+import { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
 
-interface LogoProps extends React.HTMLAttributes<HTMLImageElement> {
+interface LogoProps
+  extends DetailedHTMLProps<
+    ImgHTMLAttributes<HTMLImageElement>,
+    HTMLImageElement
+  > {
   /** URL of logo image */
   src?: string
   /** Alternative text for image, e.g. 'Company Name' */

@@ -3,12 +3,12 @@ const { defaultTheme: theme } = require('./dist')
 
 module.exports = {
   color: {
-    base: theme.colors.text,
-    light: theme.colors.grays[6],
-    lightest: theme.colors.grays[4],
+    base: theme.colors.grays[9],
+    light: theme.colors.grays[8],
+    lightest: theme.colors.grays[7],
     link: theme.colors.primary,
-    linkHover: theme.colors.greens[7],
-    border: theme.colors.greens[9],
+    linkHover: theme.colors.greens[5],
+    border: theme.colors.grays[2],
     name: theme.colors.greens[6],
     type: theme.colors.red,
     errors: theme.colors.red,

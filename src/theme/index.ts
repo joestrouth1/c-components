@@ -4,8 +4,16 @@ export const defaultTheme = {
   breakpoints: ['40em', '48em', '64em', '80em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   shadows: {
+    base: '0 1px 3px 0 rgba(4, 4, 46, 0.1), 0 1px 2px 0 rgba(4, 4, 46, 0.06)',
     medium:
-      '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+      '0 4px 6px -1px rgba(4, 4, 46, 0.1), 0 2px 4px -1px rgba(4, 4, 46, 0.06)',
+    large:
+      '0 10px 15px -3px rgba(4, 4, 46, 0.1), 0 4px 6px -2px rgba(4, 4, 46, 0.05)',
+    extraLarge:
+      '0 20px 25px -5px rgba(4, 4, 46, 0.1), 0 10px 10px -5px rgba(4, 4, 46, 0.04)',
+    extraExtraLarge: '0 25px 50px -12px rgba(4, 4, 46, 0.25)',
+    outline: '0 0 0 3px rgba(6, 112, 107, 0.75)',
+
     primary:
       '0 5px 15px -2px rgba(0, 65, 66, 0.1), 0 4px 6px -2px rgba(0, 65, 66, 0.5)',
   },
@@ -142,6 +150,9 @@ export const defaultTheme = {
       letterSpacing: 'body',
       fontSize: 2,
       borderRadius: 0,
+      '&:hover, &:active': {
+        backgroundColor: 'grays.8',
+      },
     },
     primary: {
       py: 3,
@@ -152,11 +163,18 @@ export const defaultTheme = {
       backgroundRepeat: 'no-repeat',
       backgroundClip: 'padding-box, border-box',
       border: '3px solid transparent',
-      boxShadow: 'primary',
+      boxShadow: 'medium',
       borderRadius: 9999,
       color: 'white',
       fontSize: 4,
       lineHeight: 1.3333333,
+      '&:hover': {
+        boxShadow: 'large',
+        transform: 'translateY(-2px)',
+      },
+      '&:active': {
+        transform: 'translateY(0)',
+      },
     },
   },
 }

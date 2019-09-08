@@ -7,4 +7,9 @@ describe('Button', () => {
     const { getByText } = render(<Button>Click me</Button>)
     expect(getByText('Click me')).toBeInTheDocument()
   })
+
+  it('Respects `disabled` prop', () => {
+    const { getByText } = render(<Button disabled={true}>Disabled</Button>)
+    expect(getByText('Disabled')).toBeDisabled()
+  })
 })
