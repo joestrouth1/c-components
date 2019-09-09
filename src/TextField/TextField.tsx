@@ -25,12 +25,13 @@ export type TextFieldRef = HTMLInputElement
  * Wrapper for HTML's `input` element.
  */
 export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
-  ({ name = uuid(), label, hint, sx, ...props }, ref) => {
+  ({ name = uuid(), label, hint, className, ...props }, ref) => {
     return (
-      <Box sx={sx}>
+      <Box className={className}>
         <label
           htmlFor={name}
           sx={{
+            display: 'block',
             variant: 'type.label',
           }}
         >
@@ -44,6 +45,8 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
           aria-describedby={hint ? `input-${name}__hint` : undefined}
           sx={{
             appearance: 'none',
+            boxSizing: 'border-box',
+            width: '100%',
             p: 3,
             borderTop: 0,
             borderRight: 0,

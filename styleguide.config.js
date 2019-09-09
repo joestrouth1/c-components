@@ -39,6 +39,10 @@ module.exports = {
       content: 'docs/typography.md',
     },
     {
+      name: 'Pages',
+      components: 'src/pages/**/*.tsx',
+    },
+    {
       name: 'Colors',
       content: 'docs/colors.md',
     },
@@ -50,6 +54,7 @@ module.exports = {
         '**/*.test.{js,jsx,ts,tsx}',
         '**/*.spec.{js,jsx,ts,tsx}',
         '**/*.d.ts',
+        'src/pages/**/*.tsx',
         '**/styleguide/Wrapper.tsx',
         '**/styleguide/ColorPalettes.tsx',
       ],
