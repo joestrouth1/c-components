@@ -3,12 +3,14 @@ const heading = {
   letterSpacing: 'heading',
   lineHeight: 'heading',
   margin: 0,
+  color: 'greens.8',
 }
 
 const body = {
   fontFamily: 'body',
   letterSpacing: 'body',
   lineHeight: 'body',
+  color: 'text',
 }
 
 export const type = {
@@ -26,12 +28,12 @@ export const type = {
     ...body,
     fontWeight: 'body',
     fontSize: [2],
-    mb: 3,
   },
   label: {
     ...body,
     fontSize: [2],
     fontWeight: 'body',
+    color: 'greens.7',
   },
   hint: {
     ...body,
