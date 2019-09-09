@@ -24,7 +24,7 @@ export const defaultTheme = {
     heading: 'inherit',
     monospace: 'Menlo, monospace',
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96].map(px => `${px / 16}rem`),
   fontWeights: {
     body: 400,
     heading: 700,

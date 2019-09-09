@@ -35,6 +35,10 @@ module.exports = {
       ],
     },
     {
+      name: 'Typography',
+      content: 'docs/typography.md',
+    },
+    {
       name: 'Colors',
       content: 'docs/colors.md',
     },

@@ -3,7 +3,12 @@ import { jsx } from 'theme-ui'
 import { forwardRef, AnchorHTMLAttributes } from 'react'
 
 interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  /** Preset variant to use, e.g. `links.default`, `buttons.primary` */
+  /**
+   * Preset variant to use e.g. links.default or buttons.primary
+   * @default 'links.default'
+   */
+  //  Defaults should be annotated for now,
+  //  see: https://github.com/styleguidist/react-docgen-typescript/pull/205
   variant?: string
 }
 

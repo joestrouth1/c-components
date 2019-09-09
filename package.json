@@ -12,8 +12,8 @@
     "build": "tsdx build",
     "test": "tsdx test --env=jsdom",
     "lint": "tsdx lint",
-    "styleguide": "BABEL_ENV=styleguide styleguidist server",
-    "styleguide:build": "BABEL_ENV=styleguide styleguidist build"
+    "styleguide": "cross-env BABEL_ENV=styleguide styleguidist server",
+    "styleguide:build": "cross-env BABEL_ENV=styleguide styleguidist build"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -60,6 +60,7 @@
     "autoprefixer": "^9.6.1",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
+    "cross-env": "^5.2.1",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
     "file-loader": "^4.2.0",
