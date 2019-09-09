@@ -1,5 +1,5 @@
 /**@jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 import { Component } from 'react'
 import { ThemeProvider } from 'theme-ui'
 import { defaultTheme } from '../theme'
@@ -24,7 +24,9 @@ export default class Wrapper extends Component {
   render() {
     return (
       <ThemeProvider theme={defaultTheme}>
-        <SpacedStack>{this.props.children}</SpacedStack>
+        <Styled.root>
+          <SpacedStack>{this.props.children}</SpacedStack>
+        </Styled.root>
       </ThemeProvider>
     )
   }

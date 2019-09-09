@@ -30,6 +30,12 @@ const reds = ['#ebd3d6', '#981e2c']
 const red = reds[1]
 
 export const colors = {
+  text: grays[8],
+  background: grays[0],
+  primary: green,
+  secondary: greens[2],
+  accent: '#044c8a',
+  muted: greens[0],
   grays,
   greens,
   green,
