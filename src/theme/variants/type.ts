@@ -37,7 +37,12 @@ export const type = {
   },
   hint: {
     ...body,
-    lineHeight: 16 / 14,
     fontSize: [1],
+    lineHeight: 16 / 14,
+  },
+  disclaimer: {
+    ...body,
+    fontSize: [0],
+    lineHeight: 1,
   },
 }
