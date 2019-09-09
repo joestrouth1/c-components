@@ -1,4 +1,5 @@
 import { colors } from './colors'
+import * as variants from './variants'
 
 export const defaultTheme = {
   breakpoints: ['40em', '48em', '64em', '80em'],
@@ -39,15 +40,7 @@ export const defaultTheme = {
     button: '-0.03em',
     caps: '0.2em',
   },
-  colors: {
-    text: colors.grays[8],
-    background: colors.grays[0],
-    primary: colors.green,
-    secondary: colors.greens[2],
-    accent: '#044c8a',
-    muted: colors.greens[0],
-    ...colors,
-  },
+  colors,
   styles: {
     root: {
       fontFamily: 'body',
@@ -140,41 +133,5 @@ export const defaultTheme = {
       maxWidth: '100%',
     },
   },
-  buttons: {
-    nav: {
-      backgroundColor: 'grays.9',
-      color: 'white',
-      textTransform: 'uppercase',
-      fontWeight: 'body',
-      lineHeight: 'body',
-      letterSpacing: 'body',
-      fontSize: 2,
-      borderRadius: 0,
-      '&:hover, &:active': {
-        backgroundColor: 'grays.8',
-      },
-    },
-    primary: {
-      py: 3,
-      px: 4,
-      position: 'relative',
-      background: `linear-gradient(to bottom, ${colors.greens[4]}, ${colors.greens[5]}), linear-gradient(to bottom, ${colors.greens[0]}, ${colors.greens[2]})`,
-      backgroundOrigin: 'padding-box, border-box',
-      backgroundRepeat: 'no-repeat',
-      backgroundClip: 'padding-box, border-box',
-      border: '3px solid transparent',
-      boxShadow: 'medium',
-      borderRadius: 9999,
-      color: 'white',
-      fontSize: 4,
-      lineHeight: 1.3333333,
-      '&:hover': {
-        boxShadow: 'large',
-        transform: 'translateY(-2px)',
-      },
-      '&:active': {
-        transform: 'translateY(0)',
-      },
-    },
-  },
+  ...variants,
 }

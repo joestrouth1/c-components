@@ -1,18 +1,17 @@
-```jsx
-<a href="" sx={{ variant: 'buttons.primary' }}>
-  Click
-</a>
-```
-
 Default link:
 
 ```jsx
-<Link>Click me</Link>
+<Link href="/first-page">First</Link>
+<Link href="/second-page">Second</Link>
+<Link href="https://google.com" target="_blank" rel="noopener">
+  Visited
+</Link>
 ```
 
 Button link:
 
 ```jsx
-import { Button } from 'c-components'
-;<Link as={Button}>Button link</Link>
+<Link variant="buttons.primary" href="/UI Components?id=link">
+  Button link
+</Link>
 ```
