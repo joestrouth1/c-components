@@ -87,5 +87,8 @@
     "lodash": "^4.17.15",
     "lodash-es": "^4.17.15",
     "theme-ui": "^0.2.38"
+  },
+  "resolutions": {
+    "colorable/lodash": "^4.17.15"
   }
 }
