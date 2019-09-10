@@ -17,7 +17,10 @@ type User = {
 }
 
 interface PersonalInfoProps {
-  /** Details to pre-populate */
+  /**
+   * Details to pre-populate
+   * @default { first: '', middle: '', last: '', email: '' }
+   * */
   user?: User
   /** Something to do when the form submits */
   onSubmit: FormEventHandler
@@ -25,6 +28,10 @@ interface PersonalInfoProps {
 
 const defaultProps = { user: { first: '', middle: '', last: '', email: '' } }
 
+/**
+ * The first screen of the application process.
+ * @visibleName Personal information
+ */
 export const PersonalInfo = (props: PersonalInfoProps) => {
   const [user, replaceUser] = useState(
     Object.assign(defaultProps.user, props.user)
@@ -37,18 +44,8 @@ export const PersonalInfo = (props: PersonalInfoProps) => {
   }
 
   return (
-    <main
-      sx={{
-        px: 3,
-        py: 4,
-      }}
-    >
-      <h1
-        sx={{
-          variant: 'type.title',
-          mb: 4,
-        }}
-      >
+    <main sx={{ px: 3, py: 4 }}>
+      <h1 sx={{ variant: 'type.title', mb: 4 }}>
         Let's get to know each other
       </h1>
 
@@ -82,9 +79,7 @@ export const PersonalInfo = (props: PersonalInfoProps) => {
             name="middleinitial"
             value={user.middle}
             onChange={e => setUserField('middle', e.target.value)}
-            sx={{
-              flex: '0 0 56px',
-            }}
+            sx={{ flex: '0 0 56px' }}
           />
         </Flex>
 
@@ -95,9 +90,7 @@ export const PersonalInfo = (props: PersonalInfoProps) => {
           autoComplete="family-name"
           value={user.last}
           onChange={e => setUserField('last', e.target.value)}
-          sx={{
-            mb: 3,
-          }}
+          sx={{ mb: 3 }}
         />
 
         <TextField

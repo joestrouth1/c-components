@@ -1,8 +1,8 @@
 ```jsx
-<PersonalInfo
+<ResidentialInfo
   onSubmit={e => {
     e.preventDefault()
-    alert(JSON.stringify(e.target))
+    console.log('submitted!')
   }}
 />
 ```
