@@ -6,7 +6,7 @@ module.exports = {
   // ribbon: {
   //   url: 'https://github.com/joestrouth1/c-components',
   // },
-  title: 'c-components Styleguide',
+  title: 'c-components',
   theme: styleguideTheme,
   defaultExample: false,
   getExampleFilename(componentPath) {
