@@ -1,6 +1,7 @@
 import React from 'react'
-import { render, fireEvent, act } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import { ResidentialInfo } from './ResidentialInfo'
+import { act } from 'react-dom/test-utils'
 
 describe('Personal/basic info screen', () => {
   it('Renders all fields', () => {
@@ -30,34 +31,34 @@ describe('Personal/basic info screen', () => {
     expect(button).toBeDisabled()
   })
 
-  it('Submits, given valid input', async () => {
-    // const mockSubmit = jest.fn(e => e.preventDefault())
-    const { getByTestId, getByLabelText } = render(
-      <ResidentialInfo onSubmit={() => {}} />
+  it('Submits, given valid input', () => {
+    const mockSubmit = jest.fn(e => e.preventDefault())
+    const checkValidSpy = jest.spyOn(HTMLFormElement.prototype, 'checkValidity')
+
+    const { getByLabelText, getByText, getByTestId } = render(
+      <ResidentialInfo onSubmit={mockSubmit} />
     )
-    const form = getByTestId('residential-info-form') as HTMLFormElement
 
-    // const address = getByLabelText('Address')
-    // const city = getByLabelText('City')
-    // const state = getByLabelText('State')
-    // const zip = getByLabelText('ZIP')
-    // const phone = getByLabelText('Phone number')
+    const form = getByTestId('residential-info-form')
+    const address1 = getByLabelText('Address')
+    const city = getByLabelText('City')
+    const state = getByLabelText('State')
+    const zip = getByLabelText('ZIP')
+    const phone = getByLabelText('Phone number')
+    const button = getByText('Next')
 
-    // const button = getByText('Next')
+    act(() => {
+      fireEvent.change(address1, { target: { value: '123 street' } })
+      fireEvent.change(city, { target: { value: 'Wichita' } })
+      fireEvent.change(state, { target: { value: 'KS' } })
+      fireEvent.change(zip, { target: { value: '77777' } })
+      fireEvent.change(phone, { target: { value: '3165555555' } })
+    })
+    fireEvent.click(button)
 
-    // expect(getByDisplayValue('123 Sesame Street')).toBeVisible()
-
-    // waitForDomChange({
-    //   container
-    // })
-    // .then(console.log)
-    // fireEvent.change(city, { target: { value: 'Tempe'}})
-    // fireEvent.change(state, { target: { value: 'AZ'}})
-    // fireEvent.change(zip, { target: { value: '09459'}})
-    // fireEvent.change(phone, { target: { value: '8583601574'}})
-    expect(form).toBeInvalid()
-    // expect(button).toBeDisabled()
-    // fireEvent.click(button)
-    // expect(mockSubmit).not.toHaveBeenCalled()
+    expect(form).toBeValid()
+    expect(button).not.toBeDisabled()
+    expect(checkValidSpy).toHaveBeenCalled()
+    expect(mockSubmit).toHaveBeenCalled()
   })
 })

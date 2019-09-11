@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, act, fireEvent } from '@testing-library/react'
 import { PersonalInfo } from './PersonalInfo'
 
 describe('Personal/basic info screen', () => {
@@ -12,28 +12,51 @@ describe('Personal/basic info screen', () => {
     )
   })
 
-  it('Invalid without input', () => {
-    const { getByTestId } = render(<PersonalInfo onSubmit={() => {}} />)
+  it(`Won't submit with invalid input`, () => {
+    const mockSubmit = jest.fn(e => e.preventDefault())
 
-    const form = getByTestId('personal-info-form')
-    expect(form).toBeInvalid()
-  })
-
-  it('Valid with input', () => {
-    const { getByLabelText, getByTestId } = render(
-      <PersonalInfo onSubmit={() => {}} />
+    const { getByLabelText, getByText } = render(
+      <PersonalInfo onSubmit={mockSubmit} />
     )
-    const form = getByTestId('personal-info-form') as HTMLFormElement
     const first = getByLabelText('First name') as HTMLInputElement
     const middle = getByLabelText('Middle') as HTMLInputElement
     const last = getByLabelText('Last name') as HTMLInputElement
     const email = getByLabelText('Email address') as HTMLInputElement
+    const button = getByText('Next') as HTMLButtonElement
 
-    first.value = 'Henry'
-    middle.value = 'A'
-    last.value = 'Donaldson'
-    email.value = 'h@h.biz'
+    act(() => {
+      fireEvent.change(first, { target: { value: 'Henry' } })
+      fireEvent.change(middle, { target: { value: 'A' } })
+      fireEvent.change(last, { target: { value: 'Donaldson' } })
+      // invalid email
+      fireEvent.change(email, { target: { value: 'jimmy' } })
+    })
+    fireEvent.click(button)
 
-    expect(form).toBeValid()
+    // TODO: add validation for this form
+    expect(mockSubmit).toHaveBeenCalledTimes(0)
+  })
+
+  it('Submits with valid input', () => {
+    const mockSubmit = jest.fn(e => e.preventDefault())
+
+    const { getByLabelText, getByText } = render(
+      <PersonalInfo onSubmit={mockSubmit} />
+    )
+    const first = getByLabelText('First name') as HTMLInputElement
+    const middle = getByLabelText('Middle') as HTMLInputElement
+    const last = getByLabelText('Last name') as HTMLInputElement
+    const email = getByLabelText('Email address') as HTMLInputElement
+    const button = getByText('Next') as HTMLButtonElement
+
+    act(() => {
+      fireEvent.change(first, { target: { value: 'Henry' } })
+      fireEvent.change(middle, { target: { value: 'A' } })
+      fireEvent.change(last, { target: { value: 'Donaldson' } })
+      fireEvent.change(email, { target: { value: 'h@h.biz' } })
+    })
+    fireEvent.click(button)
+
+    expect(mockSubmit).toHaveBeenCalledTimes(1)
   })
 })

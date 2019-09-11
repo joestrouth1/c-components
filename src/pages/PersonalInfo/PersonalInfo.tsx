@@ -121,7 +121,7 @@ export const PersonalInfo = (props: PersonalInfoProps) => {
           }
         />
 
-        <Button variant="primary" type="submit" sx={{}}>
+        <Button variant="primary" type="submit">
           Next
         </Button>
       </Flex>
