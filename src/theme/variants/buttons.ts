@@ -21,10 +21,7 @@ const base = {
   '&[disabled]': {
     opacity: 0.5,
     boxShadow: 'none',
-    '&:hover': {
-      boxShadow: 'none',
-      transform: 'none',
-    },
+    pointerEvents: 'none',
   },
   '&:focus': {
     boxShadow: 'outline',

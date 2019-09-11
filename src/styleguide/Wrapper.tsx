@@ -12,7 +12,7 @@ function SpacedStack(props: React.HTMLAttributes<HTMLDivElement>) {
       sx={{
         display: 'grid',
         gridGap: 16,
-        maxWidth: 320,
+        maxWidth: 360,
         mx: 'auto',
         alignContent: 'stretch',
       }}

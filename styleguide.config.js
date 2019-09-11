@@ -6,7 +6,7 @@ module.exports = {
   // ribbon: {
   //   url: 'https://github.com/joestrouth1/c-components',
   // },
-  title: 'c-components Styleguide',
+  title: 'c-components',
   theme: styleguideTheme,
   defaultExample: false,
   getExampleFilename(componentPath) {
@@ -35,6 +35,14 @@ module.exports = {
       ],
     },
     {
+      name: 'Typography',
+      content: 'docs/typography.md',
+    },
+    {
+      name: 'Pages',
+      components: 'src/pages/**/*.tsx',
+    },
+    {
       name: 'Colors',
       content: 'docs/colors.md',
     },
@@ -46,6 +54,7 @@ module.exports = {
         '**/*.test.{js,jsx,ts,tsx}',
         '**/*.spec.{js,jsx,ts,tsx}',
         '**/*.d.ts',
+        'src/pages/**/*.tsx',
         '**/styleguide/Wrapper.tsx',
         '**/styleguide/ColorPalettes.tsx',
       ],

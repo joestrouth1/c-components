@@ -11,7 +11,7 @@ Default link:
 Button link:
 
 ```jsx
-<Link variant="buttons.primary" href="/UI Components?id=link">
+<Link variant="buttons.primary" href="/#/UI Components?id=link">
   Button link
 </Link>
 ```
