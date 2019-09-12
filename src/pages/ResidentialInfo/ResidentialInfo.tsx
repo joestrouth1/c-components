@@ -129,7 +129,12 @@ export function ResidentialInfo(props: ResidentialInfoProps) {
             !isValid && formRef.current && formRef.current.reportValidity()
           }
         >
-          <Button type="submit" disabled={!isValid} sx={{ flex: 1 }}>
+          <Button
+            variant="primary"
+            type="submit"
+            disabled={!isValid}
+            sx={{ flex: 1 }}
+          >
             Next
           </Button>
         </Flex>

@@ -22,6 +22,7 @@ module.exports = {
     base: theme.fonts.body,
     monospace: [
       '"FuraCode NF"',
+      'Fira Code',
       '"Operator Mono"',
       'Dank Mono',
       'Menlo',

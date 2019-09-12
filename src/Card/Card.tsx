@@ -20,6 +20,14 @@ export type CardRef = HTMLDivElement
 
 export const Card = forwardRef<CardRef, CardProps>(
   ({ variant = 'default', ...props }, ref) => {
-    return <div ref={ref}>{props.children}</div>
+    return (
+      <div
+        ref={ref}
+        sx={{
+          variant: `cards.${variant}`,
+        }}
+        {...props}
+      />
+    )
   }
 )
