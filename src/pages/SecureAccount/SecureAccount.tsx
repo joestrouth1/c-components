@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui'
 
 /**
  * Where customers setup 2-factor authentication.
+ * @visibleName 2FA enrollment
  */
 export const SecureAccount = () => {
   return (

@@ -4,6 +4,7 @@ import { Link } from '../../Link'
 
 /**
  * Where users scan their ID.
+ * @visibleName Scan your ID
  */
 export const ScanId = () => {
   return (
