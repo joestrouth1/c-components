@@ -14,14 +14,12 @@ export const ScanId = () => {
           Save time and secure your account by uploading a picture of your ID.
         </p>
       </header>
-      <p sx={{ variant: 'type.body', mb: 3 }}>
+      <p sx={{ variant: 'type.body' }}>
         We'll use your card to fill out some of the application for you, as well
         as to protect against fraud.
       </p>
 
-      <p sx={{ variant: 'type.body', mb: 3 }}>
-        What type of ID card do you have?
-      </p>
+      <p sx={{ variant: 'type.body' }}>What type of ID card do you have?</p>
 
       <form sx={{ mb: 3 }}>
         <pre>Radio group as Cards</pre>
