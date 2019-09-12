@@ -1,4 +1,4 @@
-import { colors } from '../colors'
+import { gradients } from '../gradients'
 
 const base = {
   appearance: 'none',
@@ -48,7 +48,7 @@ export const buttons = {
     py: 3,
     px: 4,
     position: 'relative',
-    background: `linear-gradient(to bottom, ${colors.greens[4]}, ${colors.greens[5]}), linear-gradient(to bottom, ${colors.greens[0]}, ${colors.greens[2]})`,
+    background: `${gradients.primary}, ${gradients.light}`,
     backgroundOrigin: 'padding-box, border-box',
     backgroundRepeat: 'no-repeat',
     backgroundClip: 'padding-box, border-box',
