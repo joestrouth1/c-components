@@ -2,7 +2,7 @@
   "include": [
     "src",
     "types",
-    "node_modules/@testing-library/jest-dom/extend-expect.d.ts"
+    "../node_modules/@testing-library/jest-dom/extend-expect.d.ts"
   ],
   "compilerOptions": {
     "target": "es5",

@@ -1,8 +1,8 @@
 Primary button:
 
 ```jsx
-<Button>Next</Button>
-<Button disabled>Next</Button>
+<Button variant="primary">Next</Button>
+<Button variant="primary" disabled>Next</Button>
 ```
 
 Nav button:
