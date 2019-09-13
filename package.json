@@ -1,5 +1,5 @@
 {
-  "name": "@joestrouth1/c-components",
+  "name": "c-components",
   "version": "0.1.3",
   "main": "dist/index.js",
   "module": "dist/c-components.esm.js",
