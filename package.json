@@ -84,7 +84,7 @@
     "@emotion/core": "^10.0.16",
     "@mdx-js/react": "^1.4.0",
     "colorable": "^1.0.5",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lodash-es": "^4.17.15",
     "theme-ui": "^0.2.38"
   },
