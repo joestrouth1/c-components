@@ -85,7 +85,7 @@
     "@mdx-js/react": "^1.4.0",
     "colorable": "^1.0.5",
     "lodash": "^4.17.15",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.21",
     "theme-ui": "^0.2.38"
   },
   "resolutions": {
